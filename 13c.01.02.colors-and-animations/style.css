@@ -25,7 +25,7 @@ html[data-theme='dark'] {
   --color-main: #fb0563;
   --color-secondary1:#676b70;
   --color-black:#ffffff; 
-  --color-light:#706f6f ;
+  --color-light:#000000 ;
 
 }
 
@@ -37,7 +37,7 @@ input[type=checkbox] {
 
 label { 
   cursor: pointer;
-  text-indent: -9999px;
+  
   width: 52px;
   height: 27px;
   background: var(--color-main);
@@ -73,6 +73,30 @@ label:active:after {
   width: 45px;
 }
 
+/*animation */
+
+#spin {
+ 
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+#butt {
+ 
+  position: relative;
+  animation-name: movin;
+  animation-duration: 4s;
+}
+
+@keyframes movin {
+  0%   {background-color:var(--color-black); left:0px; top:0px;}
+  25%  {background-color:var(--color-secondary1); left:200px; top:0px;}
+  50%  {color: var(--color-black); background-color:var(--color-light); left:200px; top:100px;}
+  75%  {background-color:var(--color-black); left:0px; top:100px;}
+  100% {background-color:var(--color-main); left:0px; top:0px;}
+}
 
 
 /* Fonts */
@@ -382,4 +406,12 @@ footer section div {
     line-height: 3.5rem;
   }
 
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }
