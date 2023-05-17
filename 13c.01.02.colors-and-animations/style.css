@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Stoke&family=Zilla+Slab:wght@300&display=swap');
+
 /* Resetter */
 * {
   margin: 0px;
@@ -5,25 +7,40 @@
   list-style: none;
 }
 
+ /* color */
+ :root {
+  --font-stoke: 'stoke', serif;
+  --color-background: #BAF5FF;
+  --color-main: #99325A;
+  --color-secondary1:#e9d2cf;
+  --color-black:#3b2e30; 
+  --color-light:#FCFCFC ;
+ 
+}
+
+
 /* Fonts */
 html {
   font-family: "Poppins", sans-serif;
   font-size: 1.2em;
+
 }
 
 h1,
 h2,
 h3 {
-  color: #111;
+  color: var(--color-black);
   font-family: "Noto Serif Display", serif;
   margin-bottom: 1rem;
+  color: var(--color-main);
 }
 
 h1 {
-  color: #eee;
+color: var(--color-light);
   font-size: 3.052rem;
   line-height: 3.5rem;
   margin-bottom: 2rem;
+  color: var(--color-main);
 }
 
 h2 {
@@ -40,7 +57,7 @@ h3 {
 }
 
 p {
-  color: #222;
+ color: var(--color-black);
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -49,7 +66,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #222;
+  color: var(--color-black);
 }
 
 a:hover {
@@ -65,12 +82,13 @@ button {
   font-size: 1rem;
   text-align: center;
   text-decoration: none;
-  background-color: #222;
-  color: #eee;
+  background-color: var(--color-main);
+ color: var(--color-light);
 }
 
 .dark_button {
-  background-color: #000;
+  background-color: var(--color-main);
+  color: var(--color-light);
 }
 
 input[type="text"] {
@@ -80,9 +98,9 @@ input[type="text"] {
   padding: 1rem 1rem;
   font-size: 1rem;
   text-align: left;
-  background-color: #eee;
-  border-color: #ddd;
-  color: #222;
+  background-color: var(--color-light);
+  border-color: var(--color-main);
+  color: var(--color-black);
 }
 
 /* Menu */
@@ -91,11 +109,13 @@ nav {
   padding: 1rem;
   justify-content: space-between;
   align-items: center;
-  background-color: #111;
+  background-color: var(--color-secondary1);
+ 
+ 
 }
 
 nav a {
-  color: white;
+  color: var(--color-secondary2);
   text-decoration: none;
 }
 
@@ -118,11 +138,12 @@ header {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  background-color: #222;
+  background-color: var(--color-background);
+
 }
 
 header p {
-  color: #ddd;
+ color: var(--color-main);
 }
 
 header button {
@@ -156,7 +177,7 @@ header button {
 /* product section */
 #product {
   padding: 5rem 3rem;
-  background-color: #ddd;
+  background-color:var(--color-background);
 }
 
 #product h2 {
@@ -194,7 +215,7 @@ header button {
   min-height: 150px;
   padding: 1rem;
   margin: 3rem;
-  background-color: #ccc;
+  background-color: var(--color-secondary1);
   border-radius: 300px;
 }
 .product_graphics object{
@@ -209,6 +230,8 @@ header button {
   padding: 2rem;
   align-items: center;
   justify-content: space-around;
+  background-color: var(--color-secondary1);
+  
 }
 
 .highlight div {
@@ -239,7 +262,7 @@ header button {
   padding: 2rem;
   align-items: center;
   justify-content: space-around;
-  background-color: #ccc;
+  background-color: var(--color-secondary1);
 }
 
 #request div {
